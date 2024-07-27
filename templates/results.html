@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Results</h1>
+        <div class="result-item">AND: {{ 'True' if results['AND'] else 'False' }}</div>
+        <div class="result-item">OR: {{ 'True' if results['OR'] else 'False' }}</div>
+        <div class="result-item">NOT A: {{ 'True' if results['NOT_A'] else 'False' }}</div>
+        <div class="result-item">NOT B: {{ 'True' if results['NOT_B'] else 'False' }}</div>
+        <div class="result-item">IMPLICATION: {{ 'True' if results['IMPLICATION'] else 'False' }}</div>
+        <div class="result-item">BICONDITIONAL: {{ 'True' if results['BICONDITIONAL'] else 'False' }}</div>
+
+        <h2>Truth Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>AND</th>
+                    <th>OR</th>
+                    <th>NOT A</th>
+                    <th>NOT B</th>
+                    <th>IMPLICATION</th>
+                    <th>BICONDITIONAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in truth_table %}
+                <tr>
+                    <td>{{ 'True' if row['A'] else 'False' }}</td>
+                    <td>{{ 'True' if row['B'] else 'False' }}</td>
+                    <td>{{ 'True' if row['AND'] else 'False' }}</td>
+                    <td>{{ 'True' if row['OR'] else 'False' }}</td>
+                    <td>{{ 'True' if row['NOT_A'] else 'False' }}</td>
+                    <td>{{ 'True' if row['NOT_B'] else 'False' }}</td>
+                    <td>{{ 'True' if row['IMPLICATION'] else 'False' }}</td>
+                    <td>{{ 'True' if row['BICONDITIONAL'] else 'False' }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>

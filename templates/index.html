@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logical Operations</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Logical Operations</h1>
+        <p>Select values for A and B using the checkboxes below and click on "Calculate" to see the results of various logical operations. If a checkbox is checked, the value is considered "True"; otherwise, it is "False". The application will display the results of the operations and a truth table showing all possible combinations of A and B.</p>
+        <form action="/calculate" method="post">
+            <label>
+                A:
+                <input type="checkbox" name="A" value="true">
+            </label>
+            <label>
+                B:
+                <input type="checkbox" name="B" value="true">
+            </label>
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>
