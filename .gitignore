@@ -1,1 +1,10 @@
-venv/
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore environment files
+/venv
+
+# Ignore other system files
+.DS_Store
+Thumbs.db
