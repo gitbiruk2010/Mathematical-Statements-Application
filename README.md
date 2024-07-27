@@ -3,8 +3,10 @@
 This is a simple Flask application that performs various logical operations and displays the results. It includes functionalities to calculate logical operations such as AND, OR, NOT, IMPLICATION, and BICONDITIONAL, and also provides a truth table for these operations.
 
 ## Screenshots:
-![alt text](image.png)
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/f381b77f-1eef-4217-93f1-f160b8573efc)
+
+![image](https://github.com/user-attachments/assets/fd62cbf6-ecc3-46f7-9692-817fd9a63af8)
+
 ## Features
 
 - Perform logical operations: AND, OR, NOT, IMPLICATION, and BICONDITIONAL.
